@@ -1,0 +1,145 @@
+:root {
+	--cell-size: 150px;
+
+	--color: #81c3fd; /* for hover */
+	--color-set: #0275d8; /* when set */
+	--l: 10px; /* X line-width */
+}
+body {
+	margin: 0;
+    background-color: #0d1117;
+}
+.game{
+    position: absolute;
+    top: 15%;
+    left: 33%;
+    background-color: #161b22;
+    border-radius: 3rem;
+    padding: 5rem;;
+}
+
+.pointer {
+    cursor: pointer;;
+}
+
+.restartButton{
+    width: 2rem;
+    height: 2rem;
+}
+.top{
+    display: flex;
+}
+.bottom{
+    margin-top: 2rem;
+}
+
+.white {
+    color: white;
+    font-weight: bold;
+}
+.font-curier{
+    font-family: 'Courier New', Courier, monospace;
+}
+.playerTurn {
+    margin-right: 25rem;
+}
+.board {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+}
+
+.cell {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+    border-radius: 2rem;
+    background-color: #a2a2a2;
+}
+
+/* remove border for edges */
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+	border-top: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+	border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+	border-right: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+	border-bottom: none;
+}
+
+.cell.x, .cell.o {
+	cursor: not-allowed;
+}
+
+
+.board.x .cell:not(.o):not(.x):hover {
+    background-image: url(assets/X.png);
+	background-size: 80% 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.cell:not(.o).x {
+    background-image: url(assets/X.png);
+	background-size: 80% 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.board.o .cell:not(.o):not(.x):hover {	
+    background-image: url(assets/O.png);
+	background-size: 80% 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.cell:not(.x).o {
+    background-image: url(assets/O.png);	
+    background-size: 80% 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.winning-message.show {
+	display: flex;
+}
+
+.center{
+    text-align: center;
+}
+
+.winCount{
+    display: grid;
+    grid-template-columns: auto 25rem auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.winnerIcon{
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+.winning-message{
+    position: absolute;
+    left: 37%;
+    font-size: 6rem;
+    color: #0dd015;   
+}

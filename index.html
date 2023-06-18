@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <h1 id="winningMessageText" class="white font-curier  winning-message"></h1>
+    <main>
+      <div class="game">
+
+        <div class="top">
+          <p id="playerTurn" class="playerTurn white font-curier">x's Turn</p>
+          <img id="restartButton" class="pointer restartButton" src="assets/restart.png"></img>
+        </div>
+        <div class="board" id="board">
+          <div class="cell pointer"></div>
+          <div class="cell pointer"></div>
+          <div class="cell pointer"></div>
+          <div class="cell pointer"></div>
+          <div class="cell pointer"></div>
+          <div class="cell pointer"></div>
+          <div class="cell pointer"></div>
+          <div class="cell pointer"></div>
+          <div class="cell pointer"></div>
+        </div>
+        <div class="bottom">
+          <div id="winCount" class="winCount">
+          <div class="flex">
+                <img src="assets/X.png" class="winnerIcon">
+                <h2 id="x_wins" class="white font-curier">0</h2>
+           </div>
+           <div></div>
+           <div class="flex">
+                <img src="assets/O.png" class="winnerIcon">
+                <h2 id="o_wins" class="white font-curier">0</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
